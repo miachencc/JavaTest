@@ -19,6 +19,7 @@ public class GetJson  {
         // String url = "http://47.95.197.229:8080/aicc/first";
         String url = "http://localhost:8081/CServlet?username=cc&password=123456";
         String url2 ="http://v.juhe.cn/weather/index?format=2&cityname=%E8%8B%8F%E5%B7%9E&key=29c346aac27f4edc9d3c2a1ae573771a";
+        String url3 ="http://v.juhe.cn/toutiao/index?type=top&key=4e8d028dc6e5a6b93da20314ebda6a9b";
         HttpClient httpClient = new DefaultHttpClient();
         HttpGet httpget = new HttpGet(url2);
         String result = null;

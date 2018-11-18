@@ -1,4 +1,4 @@
-package cn.json.com;
+package cn.json.com.Beans;
 
 public class sk {
     private int temp;

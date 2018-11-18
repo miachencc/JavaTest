@@ -1,6 +1,4 @@
-package cn.json.com;
-
-import java.util.List;
+package cn.json.com.Beans;
 
 public class WeatherBean {
     private int resultcode;

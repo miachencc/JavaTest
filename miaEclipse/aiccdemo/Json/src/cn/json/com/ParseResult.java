@@ -1,8 +1,13 @@
 package cn.json.com;
 
+import cn.json.com.Beans.WeatherBean;
+import cn.json.com.Beans.future;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import java.util.Iterator;
+import java.util.List;
 
 import static cn.json.com.GetJson.getResponse;
 
@@ -34,6 +39,12 @@ public class ParseResult {
         String result = getResponse();
         //一般不用此方法
         JsonObject resultJson =(JsonObject)new JsonParser().parse(result).getAsJsonObject();
+
+       /* Gson gson = new Gson();
+        String resultJson=gson.toJson(result);
+        System.out.println(resultJson);
+        */
+
         System.out.println(resultJson);
         int code = resultJson.get("resultcode").getAsInt();
         String reason = resultJson.get("reason").getAsString();
@@ -44,6 +55,16 @@ public class ParseResult {
         Gson gson = new Gson();
         WeatherBean WeatherBean = gson.fromJson(result, WeatherBean.class);
         System.out.println(WeatherBean.getError_code());
+        System.out.println(WeatherBean.getResult().getFuture());
 
+        List<future> futures = WeatherBean.getResult().getFuture();
+        Iterator<future> futureIterator = futures.iterator();
+        System.out.println("未来"+futures.size()+"天的天气如下：");
+        while(futureIterator.hasNext()){
+            future future =futureIterator.next();
+           // String futurejson = gson.toJson(future);
+            System.out.println(future.getWeek()+"温度："+future.getTemperature());
+        }
+        }
     }
-}
+

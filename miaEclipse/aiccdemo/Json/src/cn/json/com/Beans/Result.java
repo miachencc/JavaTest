@@ -1,11 +1,24 @@
-package cn.json.com;
+package cn.json.com.Beans;
+
+import cn.json.com.Beans.sk;
+import cn.json.com.Beans.today;
 
 import java.util.List;
 
 public class Result {
-    private sk sk;
-    private today today;
-    //private List< future> future;
+    private cn.json.com.Beans.sk sk;
+    private cn.json.com.Beans.today today;
+    private List< future> future;
+
+    public List<cn.json.com.Beans.future> getFuture() {
+        return future;
+    }
+
+    public void setFuture(List<cn.json.com.Beans.future> future) {
+        this.future = future;
+    }
+
+
 
     public sk getSk() {
         return sk;
