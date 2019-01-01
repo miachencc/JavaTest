@@ -1,0 +1,1 @@
+﻿issues{expand='operations,versionedRepresentations,editmeta,changelog,renderedFields', id=10388, self='http://jira.lietou.com/rest/api/2/issue/10388', key='HSS-6', fields=fields{description=' 未访谈时,B端查看访谈记录报系统错误', summary=' 未访谈时,B端查看访谈记录报系统错误', assignee=assignee{name='zhangjg'}, creator=creator{name='zhaon'}, issuetype=issuetype{id='10207'}}}
