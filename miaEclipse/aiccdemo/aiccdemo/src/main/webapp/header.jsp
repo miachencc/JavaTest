@@ -4,10 +4,10 @@
 <!-- 登录 注册 购物车... -->
 <div class="container-fluid">
 	<div class="col-md-4">
-		<img src="img/logo2.png" />
+		<!--img src="img/logo2.png" /-->
 	</div>
 	<div class="col-md-5">
-		<img src="img/header.png" />
+		<!--img src="img/header.png" /-->
 	</div>
 	<div class="col-md-3" style="padding-top:20px">
 		<ol class="list-inline">

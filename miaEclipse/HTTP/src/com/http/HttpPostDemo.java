@@ -25,13 +25,16 @@ public class HttpPostDemo {
         System.out.println(getResponse1());
     }
     public static String getResponse1() {
-        String url = "http://localhost:8081/CServlet";
+        String url = "http://10.110.13.22:7385/RPC/IAbtestService/isGoldCdkHcomp";
         HttpClient httpClient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost(url);
 
         JSONObject jsonParam = new JSONObject();
-        jsonParam.put("username","admin");
-        jsonParam.put("password","123456");
+        jsonParam.put("clientId","10077");
+        jsonParam.put("currentUsreId","20887");
+        jsonParam.put("data","{\n" +
+                "\t\t\"hcompId\": 447\n" +
+                "\t}");
 
         //表单方式
        /* List<NameValuePair> param = new ArrayList<NameValuePair>();
